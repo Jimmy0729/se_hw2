@@ -12,3 +12,14 @@
 ### 執行方式
 ```bash
 python3 input_module.py
+```
+
+# part B -visualize
+
+### 功能
+根據`expenses.csv`畫出對應的圓餅圖
+
+### 執行方式
+```bash
+python3 visualize.py
+```
