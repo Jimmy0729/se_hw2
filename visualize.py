@@ -2,8 +2,18 @@ import csv
 from collections import defaultdict
 from pathlib import Path
 import matplotlib.pyplot as plt
-plt.rcParams['font.family'] = 'Microsoft JhengHei'
-plt.rcParams['axes.unicode_minus'] = False
+plt.figure(figsize=(6,6))  # 圓餅圖大小
+plt.pie(
+    amounts,
+    labels=categories,      # 類別名稱
+    autopct="%1.1f%%",      # 顯示百分比，保留一位小數
+    startangle=90,          # 從 90 度開始繪圖
+    counterclock=False      # 逆時針 False → 順時針
+)
+plt.title("支出分類比例")   # 圓餅圖標題
+plt.axis("equal")           # 保持圓形
+plt.show()
+
 DATA_FILE = Path("expenses.csv")
 
 def load_expenses():
