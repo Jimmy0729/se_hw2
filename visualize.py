@@ -2,7 +2,8 @@ import csv
 from collections import defaultdict
 from pathlib import Path
 import matplotlib.pyplot as plt
-
+plt.rcParams['font.family'] = 'Microsoft JhengHei'
+plt.rcParams['axes.unicode_minus'] = False
 DATA_FILE = Path("expenses.csv")
 
 def load_expenses():
